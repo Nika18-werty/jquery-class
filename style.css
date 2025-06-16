@@ -31,7 +31,7 @@ button {
 } */
 
 
-body {
+/* body {
   text-align: center;
   font-family: sans-serif;
   margin-top: 50px;
@@ -74,4 +74,35 @@ button {
   font-size: 16px;
   cursor: pointer;
 }
+ */
 
+
+
+body {
+  font-family: sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.rating-container {
+  display: inline-block;
+  background-color: #fff3eb;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.stars {
+  display: inline-block;
+}
+
+.star {
+  font-size: 30px;
+  color: black;
+  cursor: pointer;
+  transition: color 0.2s;
+}

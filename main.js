@@ -18,22 +18,37 @@
 // });
 
 
+// $(document).ready(function () {
+//   const lights = ['#red', '#yellow', '#green'];
+//   let current = 0;
+
+//   function updateLight() {
+//     $('.light').removeClass('active');
+
+//     $(lights[current]).addClass('active');
+//   }
+
+//   $('#next').click(function () {
+//     current = (current + 1) % lights.length; 
+//     updateLight();
+//   });
+
+//   updateLight(); 
+// });
+
+
 $(document).ready(function () {
-  const lights = ['#red', '#yellow', '#green'];
-  let current = 0;
+  $('.star').click(function () {
+    const index = $(this).data('index');
 
-  function updateLight() {
-    $('.light').removeClass('active');
-
-    $(lights[current]).addClass('active');
-  }
-
-  $('#next').click(function () {
-    current = (current + 1) % lights.length; 
-    updateLight();
+    $('.star').each(function () {
+      const starIndex = $(this).data('index');
+      if (starIndex <= index) {
+        $(this).css('color', 'orange');
+      } else {
+        $(this).css('color', 'black');
+      }
+    });
   });
-
-  updateLight(); 
 });
-
 
